@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "avatar": "http://localhost:1234/user-profile.7cade9d7.png?1740385140923%27",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385140923%27",
       "name": "Alex Vu",
       "email": "luan.vu@asnet.com.vn",
       "phoneNum": "11111111111111",
@@ -11,7 +11,7 @@
     },
     {
       "id": "9c91173d-6717-45a4-8dc4-16424eecec50",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385800401'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385800401'",
       "name": "Luan Vu",
       "email": "luan.vu@asnet.com.vn",
       "phoneNum": "55556666111",
@@ -20,7 +20,7 @@
     },
     {
       "id": "23bd53d4-0097-4965-ac60-0aab9a4f4ae9",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385849235'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385849235'",
       "name": "Minh",
       "email": "minh@asnet.com.vn",
       "phoneNum": "09090708231",
@@ -29,7 +29,7 @@
     },
     {
       "id": "926e3570-55b6-43a2-96b4-26938627a2e4",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385849235'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385849235'",
       "name": "Thinh",
       "email": "thinh@asnet.com.vn",
       "phoneNum": "02057891452",
@@ -37,7 +37,7 @@
       "dateAdmission": "29-Jan, 2025"
     },
     {
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385140923%27",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385140923%27",
       "name": "Alex Vu",
       "email": "luan.vu@asnet.com.vn",
       "phoneNum": "11111111111111",
@@ -47,7 +47,7 @@
     },
     {
       "id": "9c91173d-6717-45a4-8dc4-16424eecec50",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385800401'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385800401'",
       "name": "Luan Vu",
       "email": "luan.vu@asnet.com.vn",
       "phoneNum": "55556666111",
@@ -56,7 +56,7 @@
     },
     {
       "id": "23bd53d4-0097-4965-ac60-0aab9a4f4ae9",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385849235'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385849235'",
       "name": "Minh",
       "email": "minh@asnet.com.vn",
       "phoneNum": "09090708231",
@@ -65,7 +65,7 @@
     },
     {
       "id": "926e3570-55b6-43a2-96b4-26938627a2e4",
-      "avatar": "apiUrl/user-profile.7cade9d7.png?1740385849235'",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740385849235'",
       "name": "Thinh",
       "email": "thinh@asnet.com.vn",
       "phoneNum": "02057891452",
