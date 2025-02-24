@@ -6,12 +6,23 @@ const middlewares = jsonServer.defaults();
 
 const port = process.env.PORT || 3000;
 
-// Enable CORS for your frontend domain
+// Fix the CORS configuration
 server.use(
   cors({
     origin: process.env.CLIENT_URL || "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    credentials: true,
   })
 );
+
+// Make sure headers are properly set
+server.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", process.env.CLIENT_URL || "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
 
 server.use(middlewares);
 server.use(router);
