@@ -124,7 +124,7 @@
       "id": "g7890123-4567-8901-abcd-ef7890123456"
     },
     {
-      "avatar": "./assets/images/user-images/user-profile.png",
+      "avatar": "https://typescript-training-jz30.onrender.com/user-profile.7cade9d7.png?1740551405410%27",
       "name": "Henry Ford",
       "email": "henry.ford@example.com",
       "phoneNum": "1408901234",
