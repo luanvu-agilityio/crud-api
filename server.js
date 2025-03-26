@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 server.use(cors({
   origin: function(origin, callback){
-   )
+   
     if(!origin) return callback(null, true);
     
     const allowedOrigins = [
