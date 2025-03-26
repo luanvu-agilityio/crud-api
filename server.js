@@ -6,43 +6,24 @@ const middlewares = jsonServer.defaults();
 
 const port = process.env.PORT || 3000;
 
+ 
+ // Fix the CORS configuration
+ server.use(
+   cors({
+     origin: process.env.CLIENT_URL || "*",
+     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+     credentials: true,
+   })
+ );
 
-server.use(cors({
-  origin: function(origin, callback){
+   // Handle preflight requests
+   if (req.method === 'OPTIONS') {
+     return res.sendStatus(200);
+   }
    
-    if(!origin) return callback(null, true);
-    
-    const allowedOrigins = [
-      'http://localhost:3000', 
-      'https://react-basic-training-luanvu.vercel.app',
-      'https://crud-api-vuea.onrender.com'
-    ];
-    
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
-  credentials: true
-}));
-
-
-server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
-  res.header("Access-Control-Allow-Credentials", "true");
-  
-  // Handle preflight requests
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-  
-  next();
-});
+   next();
+ });
+ ;
 
 server.use(middlewares);
 server.use(router);
