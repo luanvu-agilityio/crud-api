@@ -5,18 +5,16 @@ const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://react-basic-training-luanvu.vercel.app',
+  'https://crud-api-vuea.onrender.com',
+  'http://localhost:5173'
+];
+
 // Enhanced CORS configuration
 server.use(cors({
   origin: function(origin, callback) {
-    // List of allowed origins
-    const allowedOrigins = [
-      'http://localhost:5174',
-      'https://react-basic-training-luanvu.vercel.app',
-      'https://crud-api-vuea.onrender.com',
-      'http://localhost:3000'
-    ];
-
-    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -28,12 +26,11 @@ server.use(cors({
     'Content-Type', 
     'Authorization', 
     'X-Requested-With', 
-    'Origin', 
+    'origin', 
     'Accept'
   ],
   credentials: true
 }));
-
 // Additional headers middleware for comprehensive CORS support
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", req.headers.origin || '*');
