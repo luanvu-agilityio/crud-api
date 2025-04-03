@@ -6,6 +6,7 @@ const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
 const allowedOrigins = [
+  'http://localhost:3000',
   'http://localhost:5173',
   'https://react-basic-training-luanvu.vercel.app',
   'https://crud-api-vuea.onrender.com',
